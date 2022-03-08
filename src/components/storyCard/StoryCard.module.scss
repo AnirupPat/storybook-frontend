@@ -1,6 +1,6 @@
 .storyCard {
   border-bottom: 1px solid black;
-  padding-top: 30px;
+  padding: 30px 0px;
   .header {
     display: flex;
     flex-direction: row;
@@ -47,6 +47,25 @@
         height: 112px;
         object-fit: cover;
       }
+    }
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    .button {
+      border-radius: 10px;
+      height: 20px;
+      outline: none;
+      border: none;
+    }
+    .dot {
+      margin: 0px 4px;
+    }
+    .pointers {
+      color: rgba(117, 117, 117, 1);
+      font-size: 14px;
+      margin-left: 5px;
     }
   }
 }

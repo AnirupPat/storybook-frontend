@@ -1,13 +1,17 @@
 import React from "react";
 import author1 from "../../utils/images/author1.jpeg";
 import thumbnail from "../../utils/images/thumbnail1.png";
+import ButtonUnstyled from "@mui/base/ButtonUnstyled";
+import { stories } from "../../utils/data/stories";
+import { authors } from "../../utils/data/authors";
 import styles from "./StoryCard.module.scss";
 
-const StoryCard = () => {
+const StoryCard = ({ story }) => {
+  console.log(story);
   return (
     <div className={styles.storyCard}>
       <header className={styles.header}>
-        <img src={author1} alt="Girl in a jacket"></img>
+        <img src={story.pic} alt="author img"></img>
         <span>Anirup Patnaik</span>
         <span className={styles.dot}>·</span>
         <span className={styles.date}>Mar 01</span>
@@ -25,6 +29,12 @@ const StoryCard = () => {
         <div className={styles.thumbnail}>
           <img src={thumbnail} alt="thumbnail image"></img>
         </div>
+      </div>
+      <div className={styles.footer}>
+        <ButtonUnstyled className={styles.button}>Java Script</ButtonUnstyled>
+        <span className={styles.pointers}>3 min read</span>
+        <span className={styles.dot}>·</span>
+        <span className={styles.pointers}>Selected for you</span>
       </div>
     </div>
   );
