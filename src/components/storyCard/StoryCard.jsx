@@ -12,27 +12,24 @@ const StoryCard = ({ story }) => {
     <div className={styles.storyCard}>
       <header className={styles.header}>
         <img src={story.pic} alt="author img"></img>
-        <span>Anirup Patnaik</span>
+        <span>{story.name}</span>
         <span className={styles.dot}>·</span>
-        <span className={styles.date}>Mar 01</span>
+        <span className={styles.date}>{story.story.postedDate}</span>
       </header>
       <div className={styles.body}>
         <div className={styles.content}>
-          <h2>7 Killer One-Liners in JavaScript</h2>
-          <div className={styles.text}>
-            JavaScript is the most crucial pillar of Web Development. This
-            article contains code snippets hand-picked by sterilized
-            contamination-free gloves and placed onto a satin pillow. A team of
-            50 inspected the code and ensured
-          </div>
+          <h2>{story.story.title}</h2>
+          <div className={styles.text}>{story.story.desc}</div>
         </div>
         <div className={styles.thumbnail}>
-          <img src={thumbnail} alt="thumbnail image"></img>
+          <img src={story.story.thumbnail} alt="thumbnail image"></img>
         </div>
       </div>
       <div className={styles.footer}>
-        <ButtonUnstyled className={styles.button}>Java Script</ButtonUnstyled>
-        <span className={styles.pointers}>3 min read</span>
+        <ButtonUnstyled className={styles.button}>
+          {story.story.tag}
+        </ButtonUnstyled>
+        <span className={styles.pointers}>{story.story.timeToRead}</span>
         <span className={styles.dot}>·</span>
         <span className={styles.pointers}>Selected for you</span>
       </div>
