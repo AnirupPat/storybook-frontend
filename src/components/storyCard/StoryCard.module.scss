@@ -1,0 +1,52 @@
+.storyCard {
+  border-bottom: 1px solid black;
+  padding-top: 30px;
+  .header {
+    display: flex;
+    flex-direction: row;
+    img {
+      border-radius: 50%;
+      height: 25px;
+      margin-right: 10px;
+    }
+    span {
+      margin-left: 2px;
+      margin-right: 2px;
+      font-size: 14px;
+    }
+    .dot {
+      margin: 0px 4px;
+    }
+    .date {
+      color: rgba(117, 117, 117, 1);
+    }
+  }
+  .body {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      .text {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        // Addition lines for 2 line or multiline ellipsis
+        display: -webkit-box !important;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+      }
+    }
+    .thumbnail {
+      display: block;
+      img {
+        width: 112px;
+        aspect-ratio: auto 112 / 112;
+        height: 112px;
+        object-fit: cover;
+      }
+    }
+  }
+}
